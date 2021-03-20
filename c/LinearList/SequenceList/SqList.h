@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-03-17 21:04:42
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-03-17 22:17:11
+ * @LastEditTime: 2021-03-20 21:33:46
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\LinearList\SequenceList\SqList.h
  */
@@ -15,7 +15,7 @@
 
 /* 宏定义 */
 #define LIST_INIT_SIZE 100 // 顺序表存储空间的初始分配量
-#define LISTINCREMENT 10   // 顺序表存储空间的分配增量
+#define LIST_INCREMENT 10   // 顺序表存储空间的分配增量
 
 /* 顺序表元素类型定义 */
 typedef int ElemType;
@@ -48,53 +48,46 @@ Status initList(SqList *L);
  */
 Status destroyList(SqList *L);
 
-/*
- * 置空(内容)
- *
- * 只是清理顺序表中存储的数据，不释放顺序表所占内存。
+/**
+ * @description: 只是清理顺序表中存储的数据，不释放顺序表所占内存。
+ * @param {SqList} *L
+ * @return {int} OK 返回1，表达通过
+ * @return {int} ERROR 返回0，表达错误
  */
 Status clearList(SqList *L);
 
-/*
- * 判空
- *
- * 判断顺序表中是否包含有效数据。
- *
- * 返回值：
- * TRUE : 顺序表为空
- * FALSE: 顺序表不为空
+/**
+ * @description: 判断顺序表中是否包含有效数据。
+ * @param {SqList} L
+ * @return {int}TRUE 顺序表为空
+ * @return {int}FALSE 顺序表不为空
  */
-Status listEmpty(SqList L);
+Status isListEmpty(SqList L);
 
-/*
- * 计数
- *
- * 返回顺序表包含的有效元素的数量。
+/**
+ * @description: 返回顺序表包含的有效元素的数量。
+ * @param {SqList} L
+ * @return {int} L->length
  */
 int listLength(SqList L);
 
-/*
- * 取值
- *
- * 获取顺序表中第i个元素，将其存储到e中。
- * 如果可以找到，返回OK，否则，返回ERROR。
- *
- *【备注】
- * 教材中i的含义是元素位置，从1开始计数，但这不符合编码的通用约定。
- * 通常，i的含义应该指索引，即从0开始计数。
+/**
+ * @description: 获取顺序表中第i个元素，将其存储到e中。如果可以找到，返回OK，否则，返回ERROR。
+ * @param {SqList} L
+ * @param {int} i i的含义是元素位置
+ * @param {ElemType} *e 存储到这个变量里去
+ * @return {int} OK 可以
+ * @return {int} ERROR 不可以
  */
 Status getElem(SqList L, int i, ElemType *e);
 
-/*
- * ████████ 算法2.6 ████████
- *
- * 查找
- *
- * 返回顺序表中首个与e满足Compare关系的元素位序。
- * 如果不存在这样的元素，则返回0。
- *
- *【备注】
- * 元素e是Compare函数第二个形参
+/**
+ * @description: 返回顺序表中首个与e满足Compare关系的元素位序。
+ * @param {SqList} L
+ * @param {ElemType} e
+ * @param {Status} Compare(ElemType a,ElemType b) 一个用户自定义的compare函数，用于表达两个元素之间的关系.元素e是Compare函数第二个形参
+ * @return {int} i 存在这样的元素则返回下标
+ * @return {int} 0 不存在这样的元素则返回0
  */
 int locateElem(SqList L, ElemType e, Status(Compare)(ElemType, ElemType));
 
@@ -116,35 +109,30 @@ Status priorElem(SqList L, ElemType cur_e, ElemType *pre_e);
  */
 Status nextElem(SqList L, ElemType cur_e, ElemType *next_e);
 
-/*
- * ████████ 算法2.4 ████████
- *
- * 插入
- *
- * 向顺序表第i个位置上插入e，插入成功则返回OK，否则返回ERROR。
- *
- *【备注】
- * 教材中i的含义是元素位置，从1开始计数
+/**
+ * @description: 向顺序表第i个位置上插入e
+ * @param {SqList} *L
+ * @param {int} i
+ * @param {ElemType} e
+ * @return {int} OK 插入成功则返回OK
+ * @return {int} ERROR 否则返回ERROR
  */
 Status listInsert(SqList *L, int i, ElemType e);
 
-/*
- * ████████ 算法2.5 ████████
- *
- * 删除
- *
- * 删除顺序表第i个位置上的元素，并将被删除元素存储到e中。
- * 删除成功则返回OK，否则返回ERROR。
- *
- *【备注】
- * 教材中i的含义是元素位置，从1开始计数
+/**
+ * @description: 删除顺序表第i个位置上的元素，并将被删除元素存储到e中。
+ * @param {SqList} *L
+ * @param {int} i
+ * @param {ElemType} *e
+ * @return {int} OK 插入成功则返回OK
+ * @return {int} ERROR 否则返回ERROR
  */
 Status listDelete(SqList *L, int i, ElemType *e);
 
-/*
- * 遍历
- *
- * 用visit函数访问顺序表L
+/**
+ * @description: 用visit函数访问顺序表L
+ * @param {SqList} L
+ * @return {*}
  */
 void listTraverse(SqList L, void(Visit)(ElemType));
 
