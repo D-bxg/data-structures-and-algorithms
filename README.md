@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-03-17 21:01:46
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-08-13 14:15:55
+ * @LastEditTime: 2021-08-13 14:35:58
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\README.md
 -->
@@ -43,11 +43,11 @@
 
 ## 3.1 逻辑结构
 
-集合、顺序、树、图
+集合(collection)、顺序(Sequenatial)、树(tree)、图(graph)
 
 ## 3.2 存储结构
 
-线性、链式、索引、散列
+线性(linear)、链式(linked)、索引(index)、散列(hash)
 
 ### 3.2.1 线性
 
