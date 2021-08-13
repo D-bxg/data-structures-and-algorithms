@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-03-17 21:01:46
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-08-13 14:11:00
+ * @LastEditTime: 2021-08-13 14:15:55
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\README.md
 -->
@@ -59,7 +59,7 @@
 
 ## 3.3 数据的运算（算法）
 
-查看[4 实现一个方法时要考虑的事](#4)
+查看[4 实现一个方法时要考虑的事](#4-实现一个方法时要考虑的事)
 
 # 4 实现一个方法时要考虑的事
 
