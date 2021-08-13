@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-03-17 21:04:42
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-03-20 21:33:46
+ * @LastEditTime: 2021-03-22 20:49:23
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\LinearList\SequenceList\SqList.h
  */
@@ -25,7 +25,7 @@ typedef int ElemType;
  *
  * 注：elem在使用前需要先为其分配内存，且元素从elem[0]处开始存储
  */
-typedef struct
+typedef struct SqList
 {
     ElemType *elem; // 顺序表存储空间的基址（指向顺序表所占内存的起始位置）
     int length;     // 当前顺序表长度（包含多少元素）
