@@ -2,8 +2,8 @@
  * @Author: D_bxg
  * @Date: 2021-03-17 21:04:42
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-03-22 20:49:23
- * @Description: file content
+ * @LastEditTime: 2021-08-13 14:37:07
+ * @Description: 顺序表。逻辑结构：顺序；物理结构：线性
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\LinearList\SequenceList\SqList.h
  */
 #ifndef SQLIST_H

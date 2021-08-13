@@ -2,8 +2,8 @@
  * @Author: D_bxg
  * @Date: 2021-03-22 20:47:25
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-05-16 21:01:46
- * @Description: file content
+ * @LastEditTime: 2021-08-13 14:38:14
+ * @Description: 链表。逻辑结构：顺序；物理结构：链式
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\LinearList\LinkList\LinkList.h
  */
 /*===============================
