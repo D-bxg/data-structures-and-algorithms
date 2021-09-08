@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-09-05 10:57:23
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-08 09:51:57
+ * @LastEditTime: 2021-09-08 10:06:09
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\Linear\List\SequenceList\SeqList.c
  */
@@ -32,11 +32,11 @@ int length(SeqList* pSeqList){
 };
 int showSeqList(SeqList* pSeqList){
     if(isEmpty(pSeqList)){
-        printf("showSeqList():À≥–Ú±Ì «ø’µƒ\n");
+        printf("showSeqList():È°∫Â∫èË°®ÊòØÁ©∫ÁöÑ\n");
         return 0;
     }else{
         for(int i = 0; i < pSeqList->listSize; i++){
-            printf("–Ú∫≈Œ™%dµƒ‘™Àÿ÷µ£∫%d\n",i,pSeqList->elem[i]);
+            printf("Â∫èÂè∑‰∏∫%dÁöÑÂÖÉÁ¥†ÂÄºÔºö%d\n",i,pSeqList->elem[i]);
         }
         return 1;
     }
@@ -44,7 +44,7 @@ int showSeqList(SeqList* pSeqList){
 
 bool appendElem(SeqList* pSeqList,int elem){
     if(isFull(pSeqList)){
-        printf("appendElem():À≥–Ú±Ì“—¬˙\n");
+        printf("appendElem():È°∫Â∫èË°®Â∑≤Êª°\n");
         return false;
     }else{
         pSeqList->elem[pSeqList->listSize] = elem;
@@ -54,11 +54,11 @@ bool appendElem(SeqList* pSeqList,int elem){
 };
 bool insertElem(SeqList* pSeqList,int pos,int elem){
     if(isFull(pSeqList)){
-        printf("insertElem():À≥–Ú±Ì“—¬˙£¨Œﬁ∑®≤Â»Î\n");
+        printf("insertElem():È°∫Â∫èË°®Â∑≤Êª°ÔºåÊó†Ê≥ïÊèíÂÖ•\n");
         return false;
     }else{
         if(pSeqList->listSize < pos || pos < 0){
-            printf("insertElem():≤Â»ÎŒª÷√≤ª∫œ∑®\n");
+            printf("insertElem():ÊèíÂÖ•‰ΩçÁΩÆ‰∏çÂêàÊ≥ï\n");
             return false;
         }
         for(int i = 0; i < pSeqList->listSize - pos + 1; i++){
@@ -71,11 +71,11 @@ bool insertElem(SeqList* pSeqList,int pos,int elem){
 };
 bool deleteElem(SeqList* pSeqList,int pos,int* pVal){
     if(isEmpty(pSeqList)){
-        printf("deleteElem():À≥–Ú±ÌŒ™ø’\n");
+        printf("deleteElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
         return false;
     }
     if(pSeqList->listSize < pos+1 || pos < 0){
-        printf("deleteElem():…æ≥˝Œª÷√≤ª∫œ∑®\n");
+        printf("deleteElem():Âà†Èô§‰ΩçÁΩÆ‰∏çÂêàÊ≥ï\n");
         return false;
     }
     *pVal = pSeqList->elem[pos];
@@ -87,7 +87,7 @@ bool deleteElem(SeqList* pSeqList,int pos,int* pVal){
 };
 void inversionElem(SeqList* pSeqList){
     if(isEmpty(pSeqList)){
-        printf("deleteElem():À≥–Ú±ÌŒ™ø’\n");
+        printf("deleteElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
     }
     for(int i = 0; i < pSeqList->listSize/2; i++){
         int temp;
@@ -99,11 +99,11 @@ void inversionElem(SeqList* pSeqList){
 };
 void sortElem(SeqList* pSeqList){
     if(isEmpty(pSeqList)){
-        printf("sortElem():À≥–Ú±ÌŒ™ø’\n");
+        printf("sortElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
     }
     for(int i = 0; i < pSeqList->listSize; i++){
         for(int j = i+1; j < pSeqList->listSize; j++){
-            if(pSeqList->elem[i] > pSeqList->elem[j]){ // Ωµ–Ú
+            if(pSeqList->elem[i] > pSeqList->elem[j]){ // ÈôçÂ∫è
                 int temp;
                 temp = pSeqList->elem[i];
                 pSeqList->elem[i] = pSeqList->elem[j];
@@ -115,7 +115,7 @@ void sortElem(SeqList* pSeqList){
 bool findElem(SeqList* pSeqList,int pPos[],int val);
 // {
 //     if(isEmpty(pSeqList)){
-//         printf("findMinElem():À≥–Ú±ÌŒ™ø’\n");
+//         printf("findMinElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
 //         return false;
 //     }
 //     for(int i = 0; i < pSeqList->listSize; i++){
@@ -131,7 +131,7 @@ bool findElem(SeqList* pSeqList,int pPos[],int val);
 // }
 bool findMinElem(SeqList* pSeqList,int* pPos,int* pVal){
     if(isEmpty(pSeqList)){
-        printf("findMinElem():À≥–Ú±ÌŒ™ø’\n");
+        printf("findMinElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
         return false;
     }
     int temp = pSeqList->elem[0],pos = 0;
@@ -152,7 +152,7 @@ bool findMinElem(SeqList* pSeqList,int* pPos,int* pVal){
 }
 bool changeElem(SeqList* pSeqList,int pos,int val){
     if(isEmpty(pSeqList)){
-        printf("changeElem():À≥–Ú±ÌŒ™ø’\n");
+        printf("changeElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
         return false;
     }
     pSeqList->elem[pos] = val;
@@ -160,7 +160,7 @@ bool changeElem(SeqList* pSeqList,int pos,int val){
 }
 bool deleteMinElem(SeqList* pSeqList,int* pPos,int* pVal){
     if(isEmpty(pSeqList)){
-        printf("deleteMinElem():À≥–Ú±ÌŒ™ø’\n");
+        printf("deleteMinElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
         return false;
     }
     int temp,val,pos;
@@ -174,7 +174,7 @@ bool deleteMinElem(SeqList* pSeqList,int* pPos,int* pVal){
 }
 bool deleteOneofElem(SeqList* pSeqList,int val){
     if(isEmpty(pSeqList)){
-        printf("deleteOneofElem():À≥–Ú±ÌŒ™ø’\n");
+        printf("deleteOneofElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
         return false;
     }
     int temp;
@@ -189,11 +189,11 @@ bool deleteOneofElem(SeqList* pSeqList,int val){
 }
 bool deleteBetElem(SeqList* pSeqList,int s,int t){
     if(isEmpty(pSeqList)){
-        printf("deleteBetElem():À≥–Ú±ÌŒ™ø’\n");
+        printf("deleteBetElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
         return false;
     }
     if(s>t){
-        printf("deleteBetElem():≤ª∫œ∑®\n");
+        printf("deleteBetElem():‰∏çÂêàÊ≥ï\n");
         return false;
     }
     int temp;
@@ -207,7 +207,7 @@ bool deleteBetElem(SeqList* pSeqList,int s,int t){
 }
 bool deleteSameElem(SeqList* pSeqList){
     if(isEmpty(pSeqList)){
-        printf("deleteSameElem():À≥–Ú±ÌŒ™ø’\n");
+        printf("deleteSameElem():È°∫Â∫èË°®‰∏∫Á©∫\n");
         return false;
     }
     int temp;
@@ -246,7 +246,7 @@ bool mergeSeqList(SeqList* pSeqList1,SeqList* pSeqList2,SeqList* pSeqList3){
 }
 // bool reverseTwoSeqList(SeqList* pSeqList1,SeqList* pSeqList2,SeqList* pSeqList3){
 //     if(isEmpty(pSeqList)){
-//         printf("reverseTwoSeqList():À≥–Ú±ÌŒ™ø’\n");
+//         printf("reverseTwoSeqList():È°∫Â∫èË°®‰∏∫Á©∫\n");
 //         return false;
 //     }
 //     inversionElem(pSeqList1);

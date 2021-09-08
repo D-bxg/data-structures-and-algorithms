@@ -2,23 +2,23 @@
  * @Author: D_bxg
  * @Date: 2021-09-05 10:57:17
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-08 09:45:23
- * @Description: Ë³Ğò±í
+ * @LastEditTime: 2021-09-08 10:06:16
+ * @Description: é¡ºåºè¡¨
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\Linear\List\SequenceList\SeqList.h
  */
 #define SEQLIST_H
 
 #include <stdio.h>
-#include <stdlib.h> // Ìá¹©malloc¡¢realloc¡¢free¡¢exitÔ­ĞÍ
+#include <stdlib.h> // æä¾›mallocã€reallocã€freeã€exitåŸå‹
 
 typedef struct SeqList
 {
-    int* elem; // Ë³Ğò±í´æ´¢¿Õ¼äµÄ»ùÖ·£¨Ö¸ÏòË³Ğò±íËùÕ¼ÄÚ´æµÄÆğÊ¼Î»ÖÃ£©
-    int length;     // µ±Ç°Ë³Ğò±í³¤¶È£¨°üº¬¶àÉÙÔªËØ£©
-    int listSize;   // µ±Ç°·ÖÅäµÄ´æ´¢ÈİÁ¿£¨¿ÉÒÔ´æ´¢¶àÉÙÔªËØ£©
+    int* elem; // é¡ºåºè¡¨å­˜å‚¨ç©ºé—´çš„åŸºå€ï¼ˆæŒ‡å‘é¡ºåºè¡¨æ‰€å å†…å­˜çš„èµ·å§‹ä½ç½®ï¼‰
+    int length;     // å½“å‰é¡ºåºè¡¨é•¿åº¦ï¼ˆåŒ…å«å¤šå°‘å…ƒç´ ï¼‰
+    int listSize;   // å½“å‰åˆ†é…çš„å­˜å‚¨å®¹é‡ï¼ˆå¯ä»¥å­˜å‚¨å¤šå°‘å…ƒç´ ï¼‰
 } SeqList;
 
-// ±í²Ù×÷
+// è¡¨æ“ä½œ
 void initSeqList(SeqList* pSeqList);
 void destorySeqList(SeqList* pSeqList);
 bool isEmpty(SeqList* pSeqList);
@@ -26,9 +26,9 @@ bool isFull(SeqList* pSeqList);
 int length(SeqList* pSeqList);
 int showSeqList(SeqList* pSeqList);
 
-// Êı¾İ²Ù×÷
+// æ•°æ®æ“ä½œ
 bool appendElem(SeqList* pSeqList,int elem);
-bool insertElem(SeqList* pSeqList,int pos,int elem);// pos´Ó0¿ªÊ¼
+bool insertElem(SeqList* pSeqList,int pos,int elem);// posä»0å¼€å§‹
 bool deleteElem(SeqList* pSeqList,int pos,int* pVal);
 void inversionElem(SeqList* pSeqList);
 void sortElem(SeqList* pSeqList);
@@ -37,7 +37,7 @@ bool findMinElem(SeqList* pSeqList,int pPos[],int* pVal);
 bool deleteOneofElem(SeqList* pSeqList,int val);
 bool changeElem(SeqList* pSeqList,int pos,int val);
 
-// ÍõµÀÌâÄ¿
+// ç‹é“é¢˜ç›®
 bool deleteMinElem(SeqList* pSeqList,int pos,int* pVal);
 bool deleteBetElem(SeqList* pSeqList,int s,int t);
 bool deleteSameElem(SeqList* pSeqList);

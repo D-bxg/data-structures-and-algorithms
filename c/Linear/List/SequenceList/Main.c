@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-09-05 10:56:13
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-08 09:41:17
+ * @LastEditTime: 2021-09-08 10:05:59
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\Linear\List\SequenceList\Main.c
  */
@@ -11,10 +11,10 @@
 void testSeqList(){
     SeqList seqList;
     initSeqList(&seqList,9);
-    printf("³õÊ¼»¯Íê³É,Ë³Ğò±í×î´óÏÂ±êÖµÎª£º%d\n",seqList.length);
+    printf("åˆå§‹åŒ–å®Œæˆ,é¡ºåºè¡¨æœ€å¤§ä¸‹æ ‡å€¼ä¸ºï¼š%d\n",seqList.length);
 
     int listLength = length(&seqList);
-    printf("»ñÈ¡×î´óÏÂ±êÖµ£º%d\n",listLength);
+    printf("è·å–æœ€å¤§ä¸‹æ ‡å€¼ï¼š%d\n",listLength);
     
     showSeqList(&seqList);
 
@@ -23,7 +23,7 @@ void testSeqList(){
             break;
         }
     }
-    printf("Ìí¼Ó4¸öÔªËØ\n");
+    printf("æ·»åŠ 4ä¸ªå…ƒç´ \n");
     showSeqList(&seqList);
     printf("\n");
     insertElem(&seqList,5,10);
@@ -37,7 +37,7 @@ void testSeqList(){
     showSeqList(&seqList);
     printf("\n");
     deleteElem(&seqList,1,&m);
-    printf("É¾³ıµÄÊıÖµÎª£º%d\n",m);
+    printf("åˆ é™¤çš„æ•°å€¼ä¸ºï¼š%d\n",m);
     showSeqList(&seqList);
     printf("\n");
     inversionElem(&seqList);
@@ -47,16 +47,16 @@ void testSeqList(){
     showSeqList(&seqList);
     printf("\n");
     findMinElem(&seqList,&pos,&m);
-    printf("×îĞ¡ÊıÖµÎª£º%d£¬ÏÂ±êÎª£º%d\n",m,pos);
+    printf("æœ€å°æ•°å€¼ä¸ºï¼š%dï¼Œä¸‹æ ‡ä¸ºï¼š%d\n",m,pos);
     showSeqList(&seqList);
     printf("\n");
     insertElem(&seqList,2,-10);
     findMinElem(&seqList,&pos,&m);
-    printf("×îĞ¡ÊıÖµÎª£º%d£¬ÏÂ±êÎª£º%d\n",m,pos);
+    printf("æœ€å°æ•°å€¼ä¸ºï¼š%dï¼Œä¸‹æ ‡ä¸ºï¼š%d\n",m,pos);
     showSeqList(&seqList);
     printf("\n");
     deleteMinElem(&seqList,&pos,&m);
-    printf("×îĞ¡ÊıÖµÎª£º%d£¬ÏÂ±êÎª£º%d\n",m,pos);
+    printf("æœ€å°æ•°å€¼ä¸ºï¼š%dï¼Œä¸‹æ ‡ä¸ºï¼š%d\n",m,pos);
     showSeqList(&seqList);
     printf("\n");
     insertElem(&seqList,2,-10);
