@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-03-17 21:01:46
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-06 11:24:18
+ * @LastEditTime: 2021-09-08 10:13:30
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\README.md
 -->
@@ -21,10 +21,10 @@
 
 ```java
 |---c
-|   |---Linear
-|   |   |---List
-|   |       |---SequenceList
-|   |       |---LinkList
+|   |---1 Linear
+|   |   |---1.1 List
+|   |       |---1.1.1 SequenceList
+|   |       |---1.1.2 LinkList
 |   |       |---...
 |   |
 |   |---...
