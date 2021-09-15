@@ -2,9 +2,9 @@
  * @Author: D_bxg
  * @Date: 2021-09-11 09:03:27
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-13 12:43:08
+ * @LastEditTime: 2021-09-15 10:58:50
  * @Description: file content
- * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\1 Linear\1.1 List\1.1.2 LinkList\LinkList.c
+ * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\1 Linear\1.1 List\1.1.2 LinkList\1 SinglyLinkedLlist\LinkList.c
  */
 #define LINKLIST_C
 #include "LinkList.h"
@@ -19,10 +19,10 @@ pLinkList initLinkList(){
     }
     pTail = pHead;
     pTail->pNext = NULL;
-    printf("要创建几个节点：");
+    printf("瑕佸垱寤哄嚑涓妭鐐癸細");
     scanf("%d",&length);
     for(int i = 0; i<length; i++){
-        printf("请输入下标为%d的节点值：",i);
+        printf("璇疯緭鍏ヤ笅鏍囦负%d鐨勮妭鐐瑰�硷細",i);
         scanf("%d",&val);
 
         pNew = (pLinkList)malloc(sizeof(LinkList));
@@ -38,6 +38,15 @@ pLinkList initLinkList(){
     return pHead;
 }
 void showLinkList(pLinkList pHead){
+    if(pHead == NULL){
+        printf("showLinkList()锛氶摼琛ㄤ笉瀛樺湪\n");
+        exit(-1);
+        return;
+    }
+    if(pHead->pNext == NULL){
+        printf("showLinkList()锛氱┖閾捐〃\n");
+        return;
+    }
     pLinkList p = pHead->pNext;
     while(p != NULL){
         printf("%d\t",p->data);
@@ -48,13 +57,13 @@ void showLinkList(pLinkList pHead){
 }
 bool insertNode(pLinkList pHead,int pos,ElemType val){
     if(pos < 0){
-        printf("insertNode()：插入位置不合法\n");
+        printf("insertNode()锛氭彃鍏ヤ綅缃笉鍚堟硶\n");
         return false;
     }
     pLinkList pTemp = pHead,pNew;
     for(int i = 0; i<pos; i++){
         if(i<pos && pTemp->pNext == NULL){
-            printf("insertNode()：插入位置不合法\n");
+            printf("insertNode()锛氭彃鍏ヤ綅缃笉鍚堟硶\n");
             return false;
         }else{
             pTemp = pTemp->pNext;
@@ -85,13 +94,13 @@ int length(pLinkList pHead){
 }
 bool deleteNode(pLinkList pHead,int pos,ElemType* pVal){
     if(pos<0 || pHead->pNext == NULL){
-        printf("deleteNode()：删除位置不合法\n");
+        printf("deleteNode()锛氬垹闄や綅缃笉鍚堟硶\n");
         return false;
     }
     pLinkList pTemp = pHead,p;
     for(int i = 0; i<pos; i++){
         if(pTemp->pNext->pNext == NULL){
-            printf("deleteNode()：删除位置不合法\n");
+            printf("deleteNode()锛氬垹闄や綅缃笉鍚堟硶\n");
             *pVal = NULL;
             return false;
         }else{
@@ -103,4 +112,50 @@ bool deleteNode(pLinkList pHead,int pos,ElemType* pVal){
     free(pTemp->pNext);
     pTemp->pNext = p;
     return true;    
+}
+bool destroyLinkList(pLinkList pHead){
+    pLinkList pTemp;
+    while(pHead != NULL){
+        pTemp = pHead;
+        pHead = pHead->pNext;
+        free(pTemp);
+    }
+    return true;
+}
+bool clearNode(pLinkList pHead){
+    pLinkList pTemp;
+    while(pHead->pNext != NULL){
+        pTemp = pHead->pNext;
+        pHead->pNext = pTemp->pNext;
+        free(pTemp);
+    }
+    return true;
+}
+bool getNode(pLinkList pHead,int pos,ElemType* pVal){
+    if(pos >= length(pHead) || pHead->pNext == NULL || pos<0){
+        printf("getNode()锛氳幏鍙栦綅缃笉鍚堟硶\n");
+        return false;
+    }
+    pLinkList pTemp = pHead,p;
+    for(int i = 0; i<pos+1; i++){
+        pTemp = pTemp->pNext;
+    }
+    *pVal = pTemp->data;
+    return true;    
+}
+bool findNode(pLinkList pHead,int* pPos,ElemType val){
+    if(isEmpty(pHead)){
+        printf("findNode()锛氶摼琛ㄤ负绌篭n");
+        return false;
+    }
+    pLinkList pTemp = pHead->pNext;
+    for(int i = 0; pTemp != NULL; i++){
+        if(val == pTemp->data){
+            *pPos = i;
+            return true;
+        }else{
+            pTemp = pTemp->pNext;
+        }
+    }
+    return false;
 }
