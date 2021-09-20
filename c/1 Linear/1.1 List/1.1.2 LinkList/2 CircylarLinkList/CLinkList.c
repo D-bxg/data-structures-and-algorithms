@@ -2,9 +2,9 @@
  * @Author: D_bxg
  * @Date: 2021-09-16 12:31:00
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-16 12:33:48
+ * @LastEditTime: 2021-09-17 09:26:01
  * @Description: file content
- * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\1 Linear\1.1 List\1.1.2 LinkList\b\CLinkList.c
+ * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\1 Linear\1.1 List\1.1.2 LinkList\2 CircylarLinkList\CLinkList.c
  */
 #define CLINKLIST_C
 #include "CLinkList.h"
@@ -14,15 +14,15 @@ pCLinkList initCLinkList(){
     pCLinkList pHead,pNew,pTail;
     pHead = (pCLinkList)malloc(sizeof(CLinkList));
     pTail = pHead;
-    printf("¼¸¸ö£¿");
+    printf("å‡ ä¸ªï¼Ÿ");
     scanf("%d",&temp);
     if(temp<=0){
-        printf("initLinkList()£º²»ºÏ·¨Êý¾Ý");
+        printf("initLinkList()ï¼šä¸åˆæ³•æ•°æ®");
         exit(-1);
     }
     for(int i = 0; i<temp; i++){
         pNew = (pCLinkList)malloc(sizeof(CLinkList));
-        printf("Ê²Ã´Öµ");
+        printf("ä»€ä¹ˆå€¼");
         scanf("%d",&val);
         pNew->data = val;
         pTail->pNext = pNew;
