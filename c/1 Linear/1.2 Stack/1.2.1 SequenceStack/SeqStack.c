@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-09-17 09:49:10
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-20 10:37:43
+ * @LastEditTime: 2021-09-23 09:41:47
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\1 Linear\1.2 Stack\1.2.1 SequenceStack\SeqStack.c
  */
@@ -52,8 +52,8 @@ bool popElem(pSeqStack pSeqStack,ElemType* pVal){
         printf("空的\n");
         return false;
     }else{
-        *pVal = pSeqStack->pTop[0];
         pSeqStack->pTop--;
+        *pVal = pSeqStack->pTop[0];
         return true;
     }
 }
