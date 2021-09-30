@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-09-30 09:15:03
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-30 09:47:26
+ * @LastEditTime: 2021-09-30 09:50:56
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\2 Tree\2.1 BTree\README.md
 -->
@@ -26,7 +26,11 @@ m叉树第i层至多有$m^{i-1}$个结点
 
 高度为h的二叉树至多有$2^h-1$个结点（因为是最多，所以是满二叉树）
 >#
-有n个（n>0）结点的完全二叉树高度h为$\log_2(n+1)$（向上取整）或$\log_2n$+1（$\log_2n$向下取整）
+有n个（n>0）结点的完全二叉树高度h为
+
+$\lceil\log_2(n+1)\rceil$（向上取整）或
+
+$\lfloor\log_2n\rfloor+1$（$\log_2n$向下取整）
 
 高度为h的满二叉树最多有$2^h-1$个结点
 

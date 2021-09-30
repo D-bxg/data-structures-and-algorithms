@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-09-29 10:02:48
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-29 10:41:04
+ * @LastEditTime: 2021-09-30 09:50:54
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\2 Tree\README.md
 -->
@@ -24,7 +24,7 @@
 >## 高度为h、度为m的树至少有h-1 + m个结点
 
 ># 6
->## 具有n个结点的m叉树的最小高度为向上取整的$\log_m(n(m-1)+1)$
+>## 具有n个结点的m叉树的最小高度为向上取整的$\lceil\log_m(n(m-1)+1)\rceil$
 
 ># 满二叉树
 >## 高度为h时有$2^h-1$个结点
