@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-03-17 21:01:46
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-08 10:13:30
+ * @LastEditTime: 2021-10-07 10:55:11
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\README.md
 -->
@@ -45,3 +45,11 @@
 变量和方法使用小驼峰。
 结构体使用大驼峰。
 形参用到指针的都在前方加了p。
+
+# 4 未完善
+
+队列顺序存储
+
+KMP算法
+
+线索二叉树
