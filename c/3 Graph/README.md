@@ -2,12 +2,12 @@
  * @Author: D_bxg
  * @Date: 2021-10-15 09:29:56
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-10-15 14:53:06
+ * @LastEditTime: 2021-10-28 18:09:47
  * @Description: file content
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\3 Graph\README.md
 -->
 顶点 vertex
-边 edge（有向或无向）
+边 edge（有向或无向）(有向通常用arc表示)
 
 完全图，顶点都相连，对应完全树
 有向顶点间有两条边 总边数$2C{^2_n}=n(n-1)$
@@ -66,3 +66,6 @@
 
 极小连通子图（生成树）
 删除一边，不连通
+生成树：连通不回路
+n个顶点的连通图有n-1个边
+
