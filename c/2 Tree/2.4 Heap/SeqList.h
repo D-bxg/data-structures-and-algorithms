@@ -2,7 +2,7 @@
  * @Author: D_bxg
  * @Date: 2021-09-05 10:57:17
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-11-02 09:25:02
+ * @LastEditTime: 2021-09-11 10:57:35
  * @Description: 顺序表
  * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\1 Linear\1.1 List\1.1.1 SequenceList\SeqList.h
  */
@@ -45,5 +45,3 @@ bool deleteBetElem(SeqList* pSeqList,int s,int t);
 bool deleteSameElem(SeqList* pSeqList);
 bool mergeSeqList(SeqList* pSeqList1,SeqList* pSeqList2,SeqList* pSeqList3);
 bool reverseTwoSeqList(SeqList* pSeqList1,SeqList* pSeqList2,SeqList* pSeqList3);
-
-void merge(SeqList *pSeqList, int low, int mid, int high);

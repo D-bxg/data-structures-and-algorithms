@@ -2,9 +2,9 @@
  * @Author: D_bxg
  * @Date: 2021-09-05 10:57:23
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-11-02 09:24:58
+ * @LastEditTime: 2021-09-08 10:06:09
  * @Description: file content
- * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\1 Linear\1.1 List\1.1.1 SequenceList\SeqList.c
+ * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\Linear\List\SequenceList\SeqList.c
  */
 #define SEQLIST_C
 
@@ -265,21 +265,3 @@ bool mergeSeqList(SeqList* pSeqList1,SeqList* pSeqList2,SeqList* pSeqList3){
 //     }
 //     return true;
 // }
-void merge(SeqList *pSeqList, int low, int mid, int high){
-    SeqList *B = (SeqList *)malloc(pSeqList->listSize * sizeof(SeqList));
-    int i, j, k;
-    for (k = low; k <= high;k++){
-        B->elem[k] = pSeqList->elem[k];
-    }
-    for (i = low, j = mid + 1, k = i; i <= mid && j <= high;k++){
-        if(B->elem[i]>B->elem[j]){
-            pSeqList->elem[k] = B->elem[j++];
-        }else{
-            pSeqList->elem[k] = B->elem[i++];
-        }
-    }
-    while(i <=mid)
-        pSeqList->elem[k++] = B->elem[i];
-    while(j <= high)
-        pSeqList->elem[k++] = B->elem[j];
-}
