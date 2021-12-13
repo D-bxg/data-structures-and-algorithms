@@ -2,12 +2,13 @@
  * @Author: D_bxg
  * @Date: 2021-09-29 10:02:48
  * @LastEditors: D_bxg
- * @LastEditTime: 2021-09-30 09:50:54
+ * @LastEditTime: 2021-12-13 20:12:10
  * @Description: file content
- * @FilePath: \Ce:\Code\Data-Structures-and-Algorithms\data-structures-and-algorithms\c\2 Tree\README.md
+ * @FilePath: \data-structures-and-algorithms\c\2 Tree\README.md
 -->
 ># 1
 >## 结点数 = 总度数 + 1
+>## n = 1 + 1 n1 + 2 n2 = n0 + n1 + n2
 
 ># 2
 >## 度为m的树 m叉树
@@ -46,3 +47,4 @@
 ># 平衡二叉树
 >## 任意结点的左子树和右子树深度之差不超过1（小于等于）
 >## 更高的搜索效率
+>## 每次都左加一个，右加一个
